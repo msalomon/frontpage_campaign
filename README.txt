@@ -17,6 +17,25 @@ Frontpage for a Campaign with flip-pics and save sharing with facebook, google a
 Make sure that the plugin is at the bottom of all plugins!
 Required plugin: File 
 
+Many thanks to 13 and sem. (i use the code from "phloor_flipwall", "phloor_socialshareprivacy" and "videolist")
+
+How to make the frontpage campaign:
+
+Load with the file plugin 4 Pictures with 'title' #1#, #2#, #3#, #4# and give every file a description.
+This pitures are the front-sides of the flip-pictures (the title is not shown)
+The description ist the backside of the flip-pictures
+
+Load videos from youtube, blib, giss, metacafe or vimeo (be sure not to use NOT the 'embeded url')
+After loading, edit the video-file and change the title with a leading # (example: #1 My Video)
+
+Go to the frontpage campaign plugin settings and edit (like in the setting described) and save.
+
+That's all.
+
+
+
+ 
+
 
 
 Languages:
