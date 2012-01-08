@@ -1,0 +1,48 @@
+.flipwall-entry-list-holder {
+	margin-bottom: 30px;
+}
+
+.flipwall-entry {
+	width: 153px;
+	height: 153px;
+	float: left;
+	margin: 4px;
+	position: relative;
+	cursor: pointer;
+}
+
+.flipwall-entry-front {
+	position: absolute;
+	overflow: hidden;
+	left: 1px;
+	top: 0;
+	padding:2px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ddd;
+	background: url("img/background.jpg") no-repeat center center #f9f9f9;
+}
+
+.flipwall-entry-front:hover {
+	border: 1px solid #999;
+	-moz-box-shadow: 0 0 30px #999 inset;
+	-webkit-box-shadow: 0 0 30px #999 inset;
+	box-shadow: 0 0 30px #999 inset;
+}
+
+.flipwall-entry-front img { /*
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-70px 0 0 -70px;
+*/
+	
+}
+
+.flipwall-entry-back {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}

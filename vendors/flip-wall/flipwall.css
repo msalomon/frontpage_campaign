@@ -1,0 +1,26 @@
+.flipwall-name {
+	font-size: 11px;
+	padding: 4px 5px 4px 5px;
+	font-weight: bold;
+}
+
+.flipwall-description {
+	font-size: 11px;
+	font-weight: normal;
+	padding: 4px 5px 4px 5px;
+}
+
+.flipwall-website {
+	font-size: 10px;
+	font-weight: bold;
+	padding: 4px 5px 4px 5px;
+}
+
+.flipwall-entry-list-holder {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.flipwall-entry-list-holder-last {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
