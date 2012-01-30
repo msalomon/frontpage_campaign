@@ -12,27 +12,36 @@ if(empty($vars['guid'])){
 	unset($variables['description']);
 } else {
 	unset($variables['video_url']);
+
 }
 
 foreach ($variables as $name => $type) {
-?>
+	?>
 <div>
-	<label><?php echo elgg_echo("videolist:$name") ?></label>
+
+	<?php if ($type != 'checkboxes') { ?>
+	<label><?php echo elgg_echo("videolist:$name") ?> </label>
+
 	<?php
-		if ($type != 'longtext') {
-			echo '<br />';
-		}
+	}
+	if ($type != 'longtext') {
+	    echo '<br />';
+	}
 	?>
 	<?php echo elgg_view("input/$type", array(
-			'name' => $name,
-			'value' => $vars[$name],
-		));
+	        'name' => $name,
+	        'value' => $vars[$name],
+			'options' => array(elgg_echo("videolist:$name") => elgg_echo("videolist:$name")),
+	        
+	        
+	        
+	));
 	?>
 </div>
 <?php
 }
 
-$cats = elgg_view('categories', $vars);
+$cats = elgg_view('input/categories', $vars);
 if (!empty($cats)) {
 	echo $cats;
 }
@@ -41,13 +50,13 @@ if (!empty($cats)) {
 echo '<div class="elgg-foot">';
 if ($vars['guid']) {
 	echo elgg_view('input/hidden', array(
-		'name' => 'video_guid',
-		'value' => $vars['guid'],
+            'name' => 'video_guid',
+            'value' => $vars['guid'],
 	));
 }
 echo elgg_view('input/hidden', array(
-	'name' => 'container_guid',
-	'value' => $vars['container_guid'],
+        'name' => 'container_guid',
+        'value' => $vars['container_guid'],
 ));
 
 echo elgg_view('input/submit', array('value' => elgg_echo('save')));

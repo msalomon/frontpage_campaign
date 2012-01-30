@@ -18,29 +18,29 @@ elgg_register_title_button();
 $params = array();
 
 if ($page_owner->guid == elgg_get_logged_in_user_guid()) {
-	// user looking at own videolist
-	$params['filter_context'] = 'mine';
+    // user looking at own videolist
+    $params['filter_context'] = 'mine';
 } else if (elgg_instanceof($page_owner, 'user')) {
-	// someone else's videolist
-	// do not show select a tab when viewing someone else's posts
-	$params['filter_context'] = 'none';
+    // someone else's videolist
+    // do not show select a tab when viewing someone else's posts
+    $params['filter_context'] = 'none';
 } else {
-	// group videolist
-	$params['filter'] = '';
+    // group videolist
+    $params['filter'] = '';
 }
 
 $title = elgg_echo("videolist:user", array($page_owner->name));
 
 // List videolist
 $content = elgg_list_entities(array(
-	'types' => 'object',
-	'subtypes' => 'videolist_item',
-	'container_guid' => $page_owner->guid,
-	'limit' => 10,
-	'full_view' => FALSE,
+        'types' => 'object',
+        'subtypes' => 'videolist_item',
+        'container_guid' => $page_owner->guid,
+        'limit' => 10,
+        'full_view' => FALSE,
 ));
 if (!$content) {
-	$content = elgg_echo("videolist:none");
+    $content = elgg_echo("videolist:none");
 }
 
 $sidebar = elgg_view('videolist/sidebar');

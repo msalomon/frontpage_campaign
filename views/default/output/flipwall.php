@@ -12,31 +12,25 @@ $shuffle = elgg_extract('shuffle', $vars, false);
 unset($vars['values']);
 
 if(!is_array($values) || empty($values)) {
-	return true;
+    return true;
 }
 
 // shuffle values if requested
 if($shuffle == true) {
-	shuffle($values);
+    shuffle($values);
 }
 
 $content = '';
 foreach($values as $entry) {
-	$content .= elgg_view('output/flipwall-entry', array(
-		'front' => $entry['front'],
-		'back'  => $entry['back'],
-	));
+    $content .= elgg_view('output/flipwall-entry', array(
+            'front' => $entry['front'],
+            'back'  => $entry['back'],
+    ));
 }
 
 // output the view
 if(!empty($content)) {
-	$content =  <<<HTML
-<div class="flipwall-entry-list-holder">
-$content
-	<div class="clear"></div>
-</div>
-HTML;
-
+    $content =  "<div class='flipwall-entry-list-holder'>" . $content ."<div class='clear'></div></div>";
 }
 
 echo $content;

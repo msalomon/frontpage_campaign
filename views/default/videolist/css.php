@@ -4,7 +4,4 @@
  */
 ?>
 
-.videolist-watch {
-	margin-top: 40px;
-	margin-left: 20px;
-}
+.videolist-watch { margin-top: 40px; margin-left: 20px; }

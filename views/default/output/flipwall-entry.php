@@ -14,9 +14,9 @@ unset($vars['back']);
 $link_title = elgg_echo('flipwall:clicktoflip');
 
 $content = <<<HTML
-<div class="flipwall-entry" style='float:left; width:460px; height:460px;'>
-	<div class="flipwall-entry-front" >$front</div>
-	<div class="flipwall-entry-back">$back</div>
+<div class="flipwall-entry" style='float:left; width:463px; height:463px;'>
+<div class="flipwall-entry-front" >$front</div>
+<div class="flipwall-entry-back">$back</div>
 </div>
 HTML;
 

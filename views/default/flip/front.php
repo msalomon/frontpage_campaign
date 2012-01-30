@@ -8,14 +8,10 @@ $content = '';
 
 // check for File entity
 if(elgg_instanceof($file, 'object', 'file', 'ElggFile')) {
-	$img     = $image_url;
-	$img_alt = elgg_echo('flipwall:moreabout', array(
-	$file->title
-	));
+    $img     = $image_url;
+    $img_alt = elgg_echo('flipwall:moreabout');
 
-	$content = <<<HTML
-	<img src="$img" style='float:left; width:460px; height:460px;' alt="$img_alt" />
-HTML;
+    $content = "<img src='" . $img ."' style='float:left; width:463px; height:463px;' title=" . $img_alt;
 }
 
 echo  $content;

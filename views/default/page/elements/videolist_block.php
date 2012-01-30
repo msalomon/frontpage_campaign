@@ -13,18 +13,18 @@ $container_guid = elgg_extract('container_guid', $vars, ELGG_ENTITIES_ANY_VALUE)
 $container = get_entity($container_guid);
 
 $options = array(
-	'container_guid' => $container_guid,
-	'limit' => elgg_extract('limit', $vars, 6),
-	'type' => 'object',
-	'subtypes' => 'videolist_item',
-	'full_view' => false,
-	'pagination' => false,
+        'container_guid' => $container_guid,
+        'limit' => elgg_extract('limit', $vars, 6),
+        'type' => 'object',
+        'subtypes' => 'videolist_item',
+        'full_view' => false,
+        'pagination' => false,
 );
 
 if($container) {
-	$title = elgg_echo('videolist:user', array($container->name));
+    $title = elgg_echo('videolist:user', array($container->name));
 } else {
-	$title = elgg_echo('videolist');
+    $title = elgg_echo('videolist');
 }
 
 elgg_push_context('gallery');

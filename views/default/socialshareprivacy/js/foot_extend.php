@@ -4,13 +4,13 @@ $base_url = elgg_get_site_url();
 if (elgg_get_context()=='index-page') {
     //$css_path = $base_url . 'mod/frontpage_campaign/vendors/socialshareprivacy/socialshareprivacy/socialshareprivacy.css';
     $lang     = get_language();
-    
+
     $image_url = $base_url . 'mod/frontpage_campaign/vendors/socialshareprivacy/socialshareprivacy/images/';
     $fb_dummy      = $image_url . 'dummy_facebook_en.png';
     $twitter_dummy = $image_url . 'dummy_twitter.png';
     $gplus_dummy   = $image_url . 'dummy_gplus.png';
     ?>
-    <script type="text/javascript">
+<script type="text/javascript">
       jQuery(document).ready(function($){
         if($('#socialshareprivacy').length > 0){
           $('#socialshareprivacy').socialSharePrivacy({
@@ -46,6 +46,11 @@ if (elgg_get_context()=='index-page') {
         }
       });
     </script>
+
+
+
+
+
 <?php
 }
 ?>

@@ -18,16 +18,16 @@ $title = elgg_echo("videolist:friends");
 // offset is grabbed in list_user_friends_objects
 $content = list_user_friends_objects($page_owner->guid, 'videolist_items', 10, false);
 if (!$content) {
-	$content = elgg_echo("videolist:none");
+    $content = elgg_echo("videolist:none");
 }
 
 $sidebar = elgg_view('videolist/sidebar', array());
 
 $body = elgg_view_layout('content', array(
-	'filter_context' => 'friends',
-	'content' => $content,
-	'title' => $title,
-	'sidebar' => $sidebar,
+        'filter_context' => 'friends',
+        'content' => $content,
+        'title' => $title,
+        'sidebar' => $sidebar,
 ));
 
 echo elgg_view_page($title, $body);
