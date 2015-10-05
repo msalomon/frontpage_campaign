@@ -15,7 +15,7 @@ Description:
 
 Frontpage for a Campaign with flip-pics and save sharing with facebook, google and twitter.
  
-Watch frontpage campain trailer: http://youtu.be/wEZsPgE1sNU
+Watch frontpage campaign trailer: http://youtu.be/wEZsPgE1sNU
 
 Make sure that the plugin is at the bottom of all plugins!
 
